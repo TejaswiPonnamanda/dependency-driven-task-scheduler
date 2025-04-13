@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: task
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/task_scheduler
+    username: root
+    password: "#Tejaswi@123#"
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update  # Can also be 'validate' or 'create-drop' based on your needs
+    show-sql: true  # Logs SQL queries
+    properties:
+      hibernate:
+        format_sql: true  # Formats the SQL queries for better readability
+
+
+
+
+springdoc:
+  api-docs:
+    enabled: true  # Enable Springdoc OpenAPI support for auto-generation of API docs
