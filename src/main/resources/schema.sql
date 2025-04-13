@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS `task-scheduler`;
-USE `task-scheduler`;
+CREATE DATABASE IF NOT EXISTS `task_scheduler`;
+USE `task_scheduler`;
 CREATE TABLE IF NOT EXISTS Cin (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
@@ -31,3 +31,8 @@ CREATE TABLE IF NOT EXISTS Task_Execution_Log (
     execution_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     status ENUM('PENDING', 'IN_PROGRESS', 'COMPLETED') NOT NULL
 );
+
+SELECT * FROM Cin;
+SELECT * FROM Din;
+SELECT * FROM Cin_Din_Dependency;
+SELECT * FROM Task_Execution_Log;
