@@ -15,7 +15,7 @@ A backend service that schedules tasks in a round-robin manner while respecting 
 📄 API documentation available via Swagger
 
 ⚙️ Tech Stack
-Java 17
+Java 8
 
 Spring Boot
 
