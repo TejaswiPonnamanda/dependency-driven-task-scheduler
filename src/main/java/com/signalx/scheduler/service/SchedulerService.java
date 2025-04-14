@@ -147,6 +147,13 @@ public class SchedulerService {
             }
         }
 
+
+        // ✅ EARLY deadlock detection BEFORE entering the loop
+        if (cinQueue.isEmpty() && dinQueue.isEmpty() && dependencyService.hasCycle()) {
+            throw new IllegalStateException("Deadlock detected in dependencies!");
+        }
+
+
         // Track executed tasks
         Set<Long> executedCins = new HashSet<>();
         Set<Long> executedDins = new HashSet<>();

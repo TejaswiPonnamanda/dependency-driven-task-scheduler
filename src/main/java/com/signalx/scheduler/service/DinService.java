@@ -16,7 +16,6 @@ import java.util.List;
 import java.util.Set;
 
 @Service
-@RequiredArgsConstructor
 public class DinService {
 
     @Autowired
